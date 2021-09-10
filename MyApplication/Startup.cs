@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace asp.net
+namespace MyApplication
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace asp.net
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "asp.net", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyApplication", Version = "v1" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace asp.net
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "asp.net v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyApplication v1"));
             }
 
             app.UseHttpsRedirection();

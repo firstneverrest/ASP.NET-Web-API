@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\full stack developer\\project\\learning\\asp.net\\asp.net.csproj",
-      "projectName": "asp.net",
-      "projectPath": "D:\\full stack developer\\project\\learning\\asp.net\\asp.net.csproj",
+      "projectUniqueName": "D:\\full stack developer\\project\\learning\\asp.net\\MyApplication\\MyApplication.csproj",
+      "projectName": "MyApplication",
+      "projectPath": "D:\\full stack developer\\project\\learning\\asp.net\\MyApplication\\MyApplication.csproj",
       "packagesPath": "C:\\Users\\first\\.nuget\\packages\\",
-      "outputPath": "D:\\full stack developer\\project\\learning\\asp.net\\obj\\",
+      "outputPath": "D:\\full stack developer\\project\\learning\\asp.net\\MyApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\first\\AppData\\Roaming\\NuGet\\NuGet.Config",
