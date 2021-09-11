@@ -436,3 +436,75 @@ public class AnimalsController : ControllerBase
     }
 }
 ```
+
+### BindProperties
+
+BindProperties has the same meaning like BindProperty but used for binding multiple variables.
+
+- works on simple (int, string, etc.) and complex data objects
+- does not work for HTTP GET request by default
+- is applied on the controller level
+
+```c#
+// set to support GET request
+[BindProperties(SupportsGet = true)]
+public class AnimalsController : ControllerBase
+{
+    public string name { get; set; }
+    public int age { get; set; }
+
+    [HttpPost("")]
+    public IActionResult AddAnimal()
+    {
+        return Ok($"Name = {this.name}, Age = {this.age}");
+    }
+}
+```
+
+## FromQuery
+
+FormQuery attribute is used to bind the data available in query string.
+
+```c#
+[HttpGet("country")]
+public IActionResult AddCountry([FromQuery]string name)
+{
+    return Ok($"Name = {name}");
+}
+```
+
+## FromRoute
+
+FormRoute attribute is used to bind the data available in route (URL).
+
+```c#
+[HttpGet("country/{name}")]
+public IActionResult AddCountry([FromRoute]string name)
+{
+    return Ok($"Name = {name}");
+}
+```
+
+## FromBody
+
+FormBody bind the data from body request.
+
+```c#
+[HttpPost("")]
+public IActionResult AddCountry([FromBody]string name)
+{
+    return Ok($"Name = {name}");
+}
+```
+
+## FormHeader
+
+FormHeader bind the header from request.
+
+```c#
+[HttpPost("{id}")]
+public IActionResult AddCountry([FormHeader]string developer)
+{
+    return Ok($"Name = {developer}");
+}
+```
