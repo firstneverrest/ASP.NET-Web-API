@@ -2,6 +2,11 @@
 
 ASP.NET is a framework for building web apps and services with .NET and C# which is free, cross-platform and open source. [visit official website here](https://dotnet.microsoft.com/apps/aspnet).
 
+## Technologies
+
+![image](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![image](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+
 ## What is the different between SDK and runtime
 
 SDK is stand for software develop kit which include everything needed for building .NET application. On the other hand, Runtime is used for executing dot net application. Therefore, if you would like to develop .NET application: SDK is the option for you.
@@ -508,3 +513,15 @@ public IActionResult AddCountry([FormHeader]string developer)
     return Ok($"Name = {developer}");
 }
 ```
+
+## Dependency Injection
+
+- ASP.NET Core provides built-in support for DI.
+- Dependency are registered in containers, and the container in asp.net core is `IServiceProvider`.
+- Services are registered in the `Startup.ConfigureServices` method of the app.
+
+ASP.NET Core has these built-in functions (write in ConfigureServices methods in Startup.cs):
+
+- AddSingleton
+- AddScoped
+- AddTransient
